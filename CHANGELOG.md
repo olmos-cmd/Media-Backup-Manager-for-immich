@@ -1,5 +1,31 @@
 # Versionsverlauf / Changelog
 
+## Version 1.3.4
+
+Deutsch:
+- Neues längliches Programmlogo im Kopfbereich eingebaut
+- Kopfbereich kompakter und übersichtlicher gestaltet
+- Beschreibungstext zweizeilig neben dem Logo angeordnet
+- Schriftgröße, Helligkeit und Textbreite verbessert
+- Schaltflächen vertikal zum Textblock ausgerichtet
+- Oberen Leerraum im Programmkopf reduziert
+- Weißen Rand am oberen Logo-Rand entfernt
+- Neue deutsche und englische Screenshots für GitHub ergänzt
+- README-Kopf im Stil des Immich Medienmanagers überarbeitet
+- Programmversion auf 1.3.4 erhöht
+
+English:
+- Added the new horizontal program logo to the application header
+- Made the header more compact and visually balanced
+- Arranged the description text on two lines beside the logo
+- Improved font size, brightness, and text width
+- Vertically aligned the buttons with the text block
+- Reduced the empty space at the top of the header
+- Removed the white edge above the logo
+- Added new German and English screenshots for GitHub
+- Restyled the README header to match Immich Media Manager
+- Increased the application version to 1.3.4
+
 ## Version 1.3.3
 
 Deutsch:
