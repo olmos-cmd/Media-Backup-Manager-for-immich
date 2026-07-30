@@ -1,13 +1,27 @@
-# Immich Backup Manager
+# Immich Backup Manager / Immich Backup-Manager
 
-**Version 1.3.4 · Windows · Deutsch & English · Freeware**
+---
 
-Der **Immich Backup Manager** lädt Originalfotos und Originalvideos aus einer eigenen Immich-Installation herunter. Unterstützt werden vollständige Alben, Fotos ohne Album nach Jahr sowie alle Fotos nach Jahr. Bereits vorhandene Dateien können übersprungen, überschrieben oder in einem eigenen Vergleichsfenster geprüft werden.
+<p align="center">
+  <img src="app.png" alt="Immich Backup Manager logo" width="340">
+</p>
 
-The **Immich Backup Manager** downloads original photos and videos from a self-hosted Immich installation. It supports complete albums, photos without albums grouped by year, and all photos grouped by year. Existing files can be skipped, overwritten, or reviewed in a dedicated comparison window.
+<p align="center">
+  <strong>Windows utility for downloading and backing up original photos and videos from Immich.</strong><br>
+  <strong>Windows-Hilfsprogramm zum Herunterladen und Sichern originaler Fotos und Videos aus Immich.</strong>
+</p>
 
-> Dieses Projekt ist ein unabhängiges Werkzeug und steht in keiner Verbindung zum offiziellen Immich-Projekt.  
-> This project is an independent utility and is not affiliated with the official Immich project.
+<p align="center">
+  <a href="#english">English</a> ·
+  <a href="#deutsch">Deutsch</a> ·
+  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="RELEASE_NOTES.md">Release notes</a> ·
+  <a href="LICENSE">License</a>
+</p>
+
+> **Version 1.3.4 · Windows · Rust and egui · Freeware**  
+> Freeware · Copyright © 2026 Ralf Ebert · All rights reserved.  
+> Independent utility — not an official Immich product.
 
 ---
 
@@ -38,6 +52,8 @@ The **Immich Backup Manager** downloads original photos and videos from a self-h
 | ![Download progress German](docs/screenshots/07-download-progress-german.png) | ![Download progress English](docs/screenshots/08-download-progress-english.png) |
 
 ---
+
+<a id="deutsch"></a>
 
 # Deutsch
 
@@ -134,6 +150,8 @@ Bei jedem Push und Pull Request wird das Projekt unter Windows geprüft und als 
 Nach jeder größeren Sicherung sollte geprüft werden, ob die erwarteten Dateien vollständig vorhanden und lesbar sind. Das Programm ersetzt kein zusätzliches, regelmäßig geprüftes Backup-Konzept.
 
 ---
+
+<a id="english"></a>
 
 # English
 
