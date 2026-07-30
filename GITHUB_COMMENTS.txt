@@ -1,0 +1,74 @@
+IMMICH BACKUP MANAGER 1.3.4
+
+TAG
+v1.3.4
+
+RELEASE TITLE
+Immich Backup Manager 1.3.4
+
+COMMIT SUMMARY
+Release 1.3.4 with improved program header
+
+EXTENDED COMMIT DESCRIPTION
+English:
+- Integrated the supplied horizontal Immich Backup Manager logo into the program header
+- Positioned the description text closer to the logo in a compact two-line layout
+- Increased text size and brightness for improved readability
+- Vertically aligned the header buttons with the text block
+- Reduced unused space in the upper header area
+- Removed the faint bright edge at the top of the displayed logo
+- Updated the program version to 1.3.4
+- Updated README, changelog, and release notes
+
+Deutsch:
+- Das gelieferte längliche Immich-Backup-Manager-Logo in den Programmkopf integriert
+- Beschreibungstext näher am Logo in einer kompakten zweizeiligen Anordnung platziert
+- Schriftgröße und Helligkeit für bessere Lesbarkeit erhöht
+- Schaltflächen vertikal am Textblock ausgerichtet
+- Ungenutzten Leerraum im oberen Programmkopf reduziert
+- Schwach sichtbaren hellen Rand am oberen Logo-Rand entfernt
+- Programmversion auf 1.3.4 erhöht
+- README, Versionsverlauf und Release Notes aktualisiert
+
+DESCRIBE THIS RELEASE
+## English
+
+Version 1.3.4 improves the visual layout of the Immich Backup Manager header.
+
+The supplied horizontal program logo is now integrated more cleanly into the application. The description text starts closer to the logo, is split across two lines, and uses a larger and brighter font for improved readability. The theme, language, and information buttons are vertically aligned with the text block, and unused space in the upper header area has been reduced.
+
+The faint bright edge previously visible at the top of the displayed logo has also been removed.
+
+### Changes
+
+- Integrated the supplied horizontal logo into the program header
+- Positioned the description text 36 pixels to the right of the logo
+- Added a compact two-line description layout
+- Increased text size and brightness
+- Vertically centered the header buttons beside the text block
+- Reduced upper spacing in the header
+- Removed the faint bright edge at the top of the logo
+- Updated the application version to 1.3.4
+- Updated README, changelog, and release notes
+
+---
+
+## Deutsch
+
+Version 1.3.4 verbessert die Gestaltung des Programmkopfes im Immich Backup Manager.
+
+Das gelieferte längliche Programmlogo ist jetzt sauberer in die Anwendung integriert. Der Beschreibungstext beginnt näher am Logo, wird zweizeilig angezeigt und ist durch eine größere und hellere Schrift besser lesbar. Die Schaltflächen für Darstellung, Sprache und Information sind vertikal am Textblock ausgerichtet. Außerdem wurde der ungenutzte Leerraum im oberen Programmbereich reduziert.
+
+Der zuvor schwach sichtbare helle Rand am oberen Rand des dargestellten Logos wurde ebenfalls entfernt.
+
+### Änderungen
+
+- Geliefertes längliches Logo in den Programmkopf integriert
+- Beschreibungstext 36 Pixel rechts neben dem Logo positioniert
+- Kompakte zweizeilige Beschreibung ergänzt
+- Schrift größer und heller dargestellt
+- Schaltflächen vertikal neben dem Textblock zentriert
+- Oberen Leerraum im Programmkopf reduziert
+- Schwach sichtbaren hellen Rand am oberen Logo-Rand entfernt
+- Programmversion auf 1.3.4 erhöht
+- README, Versionsverlauf und Release Notes aktualisiert
