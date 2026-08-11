@@ -1,0 +1,44 @@
+name: Windows Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Cargo
+        uses: Swatinem/rust-cache@v2
+
+      - name: Build release
+        run: cargo build --release
+
+      - name: Prepare release package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path release-package
+          Copy-Item "target/release/media_backup_manager.exe" "release-package/Media Backup Manager.exe"
+          Copy-Item "README.txt" "release-package/README.txt"
+          Copy-Item "LICENSE" "release-package/LICENSE"
+          Compress-Archive -Path "release-package/*" -DestinationPath "Media_Backup_Manager_Windows_${{ github.ref_name }}.zip"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: RELEASE_NOTES.md
+          files: |
+            Media_Backup_Manager_Windows_${{ github.ref_name }}.zip
+            release-package/Media Backup Manager.exe
