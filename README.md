@@ -65,8 +65,6 @@
 - Strict clipping of album-card content inside the visible scroll area
 - Download protocol window after completed downloads
 - Progress display with file, album, error, and status information
-- Dedicated centered Download & Settings dialog instead of a permanent side panel
-- Automatic centered download log after a completed download
 - Compare existing local files with Immich files
 - Automatically skip files that are already complete
 - Optional direct overwrite mode
@@ -112,6 +110,79 @@ Alternatively:
 cargo build --release
 ```
 
+---
+
+<a id="deutsch"></a>
+# Deutsch
+
+## Überblick
+
+**Media Backup Manager** ist eine eigenständige Windows-Anwendung zum Herunterladen und Sichern der originalen Fotos und Videos aus einer selbst gehosteten Immich-Installation. Unterstützt werden vollständige Alben, Medien ohne Album nach Jahren sowie alle Medien nach Jahren. Bereits vorhandene Dateien können übersprungen, überschrieben oder in einem eigenen Vergleichsfenster geprüft werden.
+
+## Funktionen
+
+- Verbindung mit einem selbst gehosteten Immich-Server über Serveradresse und API-Key
+- Persönliche und geteilte Alben herunterladen
+- Fotos und Videos ohne Album nach Jahren herunterladen
+- Alle Fotos und Videos nach Jahren herunterladen
+- Mehrere Alben oder Jahresordner gleichzeitig auswählen
+- Originaldateien direkt speichern, ohne zusätzliches ZIP-Archiv
+- Parallele Downloads mit einstellbarer Anzahl gleichzeitiger Übertragungen
+- Feste Seitenleiste **„Download & Einstellungen“**
+- Download-Schaltfläche direkt in der Hauptansichtszeile
+- Mathematisch festes Albumkarten-Raster mit bis zu 6 Spalten
+- Automatische Anpassung der Spaltenzahl an die verfügbare Fensterbreite
+- Gleichmäßige Kartenbreiten sowie feste horizontale und vertikale Abstände
+- Striktes Clipping aller Albumkarten-Inhalte innerhalb des sichtbaren Scrollbereichs
+- Kein Überzeichnen von Albumtiteln, Vorschaubildern oder Karteninhalten beim Scrollen
+- Protokollfenster nach abgeschlossenem Download
+- Fortschrittsanzeige mit Datei-, Album-, Fehler- und Statusinformationen
+- Vorhandene lokale Dateien mit Immich-Dateien vergleichen
+- Bereits vollständig vorhandene Dateien automatisch überspringen
+- Optional vorhandene Dateien direkt überschreiben
+- Duplikatverwaltung in einem eigenen Fenster
+- Lokale Bildvorschauen anhand der EXIF-Ausrichtung korrekt darstellen
+- Deutsche und englische Benutzeroberfläche
+- Dark Mode und Light Mode
+- Verschlüsselte Speicherung des Immich-API-Keys über Windows DPAPI
+
+## API-Key-Verschlüsselung und Migration
+
+Der Immich-API-Key wird lokal mit der **Windows Data Protection API (DPAPI)** verschlüsselt gespeichert. Der verschlüsselte Wert ist an das aktuell verwendete Windows-Benutzerkonto gebunden.
+
+Aktueller Speicherort der Einstellungen:
+
+```text
+%APPDATA%\Media_Backup_Manager\settings.json
+```
+
+Beim ersten Start von Version 1.6.2 werden vorhandene Einstellungen aus dem früheren Programmnamen nach Möglichkeit automatisch erkannt und übernommen.
+
+## Verwendung
+
+1. Immich-Serveradresse eingeben.
+2. API-Key eingeben.
+3. **Verbindung testen / Alben laden** auswählen.
+4. Gewünschte Alben oder Jahresordner auswählen.
+5. Zielordner festlegen.
+6. Festlegen, wie mit bereits vorhandenen Dateien umgegangen werden soll.
+7. Anzahl der parallelen Downloads auswählen.
+8. **Download** starten.
+
+## Unter Windows bauen
+
+1. Rust über `rustup` installieren.
+2. Repository klonen oder herunterladen.
+3. `BUILD.cmd` ausführen.
+4. Die fertige Anwendung wird als `Media Backup Manager.exe` erstellt.
+
+Alternativ:
+
+```powershell
+cargo build --release
+```
+
+---
 
 ## Immich / Trademark Notice
 
