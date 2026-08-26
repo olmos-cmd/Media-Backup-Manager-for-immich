@@ -1,0 +1,19 @@
+Media Backup Manager 1.6.3
+
+ENGLISH SUMMARY
+Switch Media Backup Manager to GPL-3.0-only and release version 1.6.3
+
+DEUTSCHE SUMMARY
+Media Backup Manager auf GPL-3.0-only umstellen und Version 1.6.3 vorbereiten
+
+ENGLISH DESCRIPTION
+Media Backup Manager 1.6.3 converts the project to genuine open-source software under GNU GPL v3.0 only. License metadata, README, About information and Windows resources were updated. The documentation now clearly states that Immich access is exclusively through the Immich API, with no direct PostgreSQL database access, and that media backups do not replace a complete Immich server/database backup. No functional download or album-view behavior was changed.
+
+DEUTSCHE BESCHREIBUNG
+Media Backup Manager 1.6.3 stellt das Projekt vollständig auf echte Open-Source-Software unter GNU GPL v3.0 only um. Lizenzmetadaten, README, Infofenster und Windows-Ressourcen wurden aktualisiert. Die Dokumentation stellt nun klar heraus, dass der Zugriff ausschließlich über die Immich-API erfolgt, keine direkte PostgreSQL-Datenbankverbindung verwendet wird und die Mediensicherung keine vollständige Immich-Server-/Datenbanksicherung ersetzt. Downloadfunktionen und Albenansicht wurden funktional nicht verändert.
+
+TAG
+v1.6.3
+
+RELEASE TITLE
+Media Backup Manager 1.6.3
