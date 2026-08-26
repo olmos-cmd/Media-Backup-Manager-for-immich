@@ -1,0 +1,65 @@
+Media Backup Manager 1.6.2
+
+COMMIT SUMMARY
+Update Media Backup Manager to 1.6.2
+
+DESCRIPTION
+Updated Media Backup Manager to version 1.6.2.
+
+- Added the current stable source code
+- Kept the compact Download & Settings sidebar
+- Kept the highlighted Download button in the main view row
+- Reworked the album view with a mathematically fixed grid
+- Added strict clipping for album-card content inside the visible scroll area
+- Prevented album titles and thumbnails from drawing over other interface areas
+- Kept the enlarged album scrollbar and scroll handle
+- Updated README, changelog, and release notes
+- Included the existing GitHub preview screenshots
+- Kept the Immich / Trademark Notice
+
+RELEASE TITLE
+Media Backup Manager 1.6.2
+
+TAG
+v1.6.2
+
+DESCRIBE THIS RELEASE
+## English
+
+Version 1.6.2 is the current stable release of Media Backup Manager.
+
+### Highlights
+
+- Fixed mathematical album-card grid
+- Up to 6 album cards side by side
+- Equal card widths and consistent spacing
+- Strict clipping of album-card content to the visible scroll viewport
+- No album-title or thumbnail overdraw outside the album area
+- Compact Download & Settings sidebar
+- Prominent Download button in the main view row
+- Download protocol window after completed downloads
+- German and English interface
+- Dark and light mode
+- DPAPI-encrypted API-key storage
+- Updated README, changelog, release notes, and screenshots
+
+---
+
+## Deutsch
+
+Version 1.6.2 ist die aktuelle stabile Version des Media Backup Manager.
+
+### Highlights
+
+- Mathematisch festes Albumkarten-Raster
+- Bis zu 6 Albumkarten nebeneinander
+- Gleich breite Karten und gleichmäßige Abstände
+- Striktes Clipping aller Albumkarten-Inhalte auf den sichtbaren Scrollbereich
+- Kein Überzeichnen von Albumtiteln oder Vorschaubildern außerhalb der Albumansicht
+- Kompakte Seitenleiste „Download & Einstellungen“
+- Hervorgehobener Download-Button in der Hauptansichtszeile
+- Protokollfenster nach abgeschlossenem Download
+- Deutsche und englische Benutzeroberfläche
+- Dark und Light Mode
+- DPAPI-verschlüsselte API-Key-Speicherung
+- README, Changelog, Release Notes und Vorschaubilder aktualisiert
