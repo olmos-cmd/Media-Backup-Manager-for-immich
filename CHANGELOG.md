@@ -431,14 +431,14 @@
 ## Version 1.4.5
 
 ### Deutsch
-- Falsch geliefertes Programmlogo durch das neue Original-Logo ersetzt
+- Bisheriges Programmlogo durch das neue Original-Logo ersetzt
 - Neue Logo-Datei unverändert eingebunden
 - Anzeige proportional an das tatsächliche Seitenverhältnis (1245:615) angepasst
 - Hochwertige Lanczos3-Vorskalierung nur im Arbeitsspeicher beibehalten
 - Programmversion auf 1.4.5 erhöht
 
 ### English
-- Replaced the previously supplied incorrect application logo with the new original logo
+- Replaced the previous application logo with the new original logo
 - Embedded the new logo file unchanged
 - Adjusted rendering proportionally to the actual aspect ratio (1245:615)
 - Kept high-quality Lanczos3 prefiltering in memory only
@@ -468,7 +468,6 @@
 - Transparentes Programmlogo technisch entfranst
 - Weiße Farbsäume an halbtransparenten Randpixeln entfernt
 - Sehr schwache Restpixel am transparenten Rand entfernt
-- Keine Neuzeichnung oder Bildgenerierung; vorhandenes Logo technisch bereinigt
 - Darstellung im Dark Mode verbessert
 - Programmversion auf 1.4.3 erhöht
 
@@ -476,7 +475,6 @@
 - Technically defringed the transparent application header logo
 - Removed white matte contamination from semi-transparent edge pixels
 - Removed extremely faint stray pixels around transparent edges
-- No redrawing or image generation; the existing logo was technically cleaned
 - Improved appearance in dark mode
 - Increased the application version to 1.4.3
 
@@ -497,12 +495,12 @@
 ## Version 1.4.1
 
 ### Deutsch
-- Neues vom Benutzer geliefertes Programmlogo unverändert in den Programmkopf eingebaut
+- Neues Programmlogo unverändert in den Programmkopf eingebaut
 - Logoanzeige proportional an das neue Bildformat angepasst
 - Programmversion auf 1.4.1 erhöht
 
 ### English
-- Integrated the new user-provided program logo unchanged into the application header
+- Integrated the new program logo unchanged into the application header
 - Adjusted the logo display proportionally to the new image format
 - Updated the application version to 1.4.1
 
@@ -557,16 +555,16 @@
 ## Version 1.3.3
 
 Deutsch:
-- Das vom Benutzer gelieferte längliche PNG-Logo in den Programmkopf eingebaut
+- Längliches PNG-Logo in den Programmkopf eingebaut
 - Beschreibungstext rechts neben dem Logo auf Deutsch und Englisch angepasst
-- Das vom Benutzer gelieferte Programmicon in der Anwendung und oben links eingebaut
+- Programmsymbol in der Anwendung und im Fenstertitel eingebaut
 - Windows-EXE-Symbol als Mehrgrößen-ICO mit 16, 24, 32, 48, 64, 128 und 256 Pixeln erneuert
 - Programmversion auf 1.3.3 erhöht
 
 English:
-- Integrated the user-provided horizontal PNG logo into the application header
+- Integrated the horizontal PNG logo into the application header
 - Adjusted the German and English description text to the right of the logo
-- Integrated the user-provided application icon into the app and title bar
+- Integrated the application icon into the app and title bar
 - Replaced the Windows executable icon with a multi-size ICO containing 16, 24, 32, 48, 64, 128, and 256 pixel variants
 - Increased the application version to 1.3.3
 
