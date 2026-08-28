@@ -27,8 +27,8 @@ The project is provided free of charge and is not commercially operated by its m
 ## Program preview / Programmvorschau
 
 <p align="center">
-  <a href="docs/screenshots/05-dark-german-albums.png">
-    <img src="docs/screenshots/05-dark-german-albums.png" alt="Media Backup Manager 1.6.8 – Dark Mode Deutsch" width="100%">
+  <a href="header_logo_dark.png">
+    <img src="header_logo_dark.png" alt="Media Backup Manager 1.6.8 – Dark header logo" width="100%">
   </a>
 </p>
 
