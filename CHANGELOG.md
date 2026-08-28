@@ -1,6 +1,6 @@
 # Versionsverlauf / Changelog
 
-## Version 1.6.8 – 28.08.2026 / 2026-08-28 – unveröffentlicht / unreleased
+## Version 1.6.8 – 28.08.2026 / 2026-08-28
 
 ### Deutsch
 - Albumkarten im hellen Design mit klarer Kartenfläche und durchgehender, pixelgenauer Umrandung an die Jahreskarten angeglichen; Dark Mode unverändert beibehalten.
@@ -47,7 +47,7 @@
 ### English
 - Added a visible border to idle checkboxes in album-cover, list and year cards in the light theme. The expanded clipping area from 1.6.6 is retained.
 - Based layout-test text bounds on the actual galley rectangle so right-aligned and centered labels are checked correctly.
-- Expanded diagnostics for checkbox and status-bar checks. Retained all eleven tests and their visibility requirements.
+- Expanded diagnostics for checkbox- and status-bar checks. Retained all eleven tests and their visibility requirements.
 - Preserved the remaining layout, graphics and functional changes from 1.6.6.
 
 ## Version 1.6.6 – 28.08.2026 / 2026-08-28 – unveröffentlicht / unreleased
@@ -137,406 +137,298 @@
 - Klarstellung ergänzt, dass Originalmedien gesichert werden, aber keine vollständige Immich-Datenbank-/Serversicherung erfolgt
 - Immich-/FUTO-Markenhinweis vollständig beibehalten
 - Programmversion auf 1.6.3 erhöht
-- Fest eingetragene private/lokale Beispiel-Serveradresse aus dem Standardzustand entfernt; die eigene Serveradresse wird vom Benutzer eingetragen
-- Buildskript und GitHub-Actions-Prüfungen auf `--locked` vorbereitet und explizite Prüfung auf vorhandene `Cargo.lock` ergänzt
-- Keine Änderungen an Downloadlogik, Albenansicht oder Vergleichslogik
 
 ### English
-- Changed the project license from the previous proprietary freeware license to **GNU General Public License v3.0 only (`GPL-3.0-only`)**
-- The project is now genuine open-source software
-- Replaced `LICENSE` with the complete official GPL v3 license text
+- Switched the project from the previous proprietary freeware license to **GNU General Public License v3.0 only (`GPL-3.0-only`)**
+- Project is now genuine open-source software
+- Added the complete official GPL v3 license text to `LICENSE`
 - Added license and repository metadata to `Cargo.toml`
-- Updated license information in the README, source-code notice, Windows resources, and About window
-- Clarified that Media Backup Manager communicates with Immich exclusively through the Immich API
-- Clarified that it does not directly connect to or modify the Immich PostgreSQL database
-- Clarified that it backs up original media files but does not provide a complete Immich database/server backup
-- Preserved the complete Immich/FUTO trademark notice
+- Updated license references in the README, source-code notice, Windows resources and About dialog
+- Clarified that Media Backup Manager communicates exclusively through the Immich API
+- Clarified that there is no direct PostgreSQL database connection and that the Immich database is not modified
+- Clarified that original media files are backed up, but this is not a complete Immich database/server backup
+- Preserved the full Immich/FUTO trademark notice
 - Increased the application version to 1.6.3
-- Removed the hard-coded private/local example server address from the default application state; users enter their own server address
-- Prepared the build script and GitHub Actions checks for `--locked` dependency verification and added an explicit `Cargo.lock` presence check
-- No changes to download logic, album view, or comparison logic
 
 ## Version 1.6.2
 
 ### Deutsch
-- Scroll-Clipping der Albumansicht korrigiert
-- Karteninhalte werden jetzt strikt auf den sichtbaren Scrollbereich begrenzt
-- Albumtitel können beim Scrollen nicht mehr über Suchleiste oder andere UI-Bereiche gezeichnet werden
-- Vorschaubilder werden ebenfalls am Scroll-Viewport geclippt
-- Kartenhintergrund, Dateianzahl und Status-Badge werden am sichtbaren Scrollbereich geclippt
-- Feste Kartenhöhe und fester vertikaler Zeilenabstand aus Version 1.6.0/1.6.1 beibehalten
-- Keine Änderung an Spaltenzahl, Kartenbreite oder restlichem Layout
+- Sechs neue Programm-Screenshots in `docs/screenshots/` integriert
+- README auf die neuen Dark-/Light-Mode-Screenshots in Deutsch und Englisch umgestellt
 - Programmversion auf 1.6.2 erhöht
 
 ### English
-- Fixed scroll clipping in the album view
-- Card contents are now strictly limited to the visible scroll viewport
-- Album titles can no longer paint over the search bar or other UI areas while scrolling
-- Thumbnails are also clipped to the scroll viewport
-- Card background, file count, and status badge are clipped to the visible scroll area
-- Kept the fixed card height and fixed vertical row spacing from versions 1.6.0/1.6.1
-- No changes to column count, card width, or the rest of the layout
+- Added six new program screenshots to `docs/screenshots/`
+- Updated the README to use the new Dark/Light Mode screenshots in German and English
 - Increased the application version to 1.6.2
 
 ## Version 1.6.1
 
 ### Deutsch
-- Letzte verbleibende Build-Warnung aus Version 1.6.0 bereinigt
-- Unnötige Vorbelegung von `checkbox_clicked` entfernt
-- Checkbox-Klickstatus wird jetzt direkt aus `checkbox.clicked()` übernommen
-- Albumkarten-Raster aus Version 1.6.0 unverändert beibehalten
+- Neues GitHub-Programmlogo als große Vorschaugrafik in der README eingebunden
+- App-Symbol, Windows-Symbol und beide Header-Logos unverändert beibehalten
+- Bestehende sechs Programm-Screenshots weiterhin vollständig eingebunden
 - Programmversion auf 1.6.1 erhöht
 
 ### English
-- Cleaned up the last remaining build warning from version 1.6.0
-- Removed the unnecessary initial assignment to `checkbox_clicked`
-- Checkbox click state is now assigned directly from `checkbox.clicked()`
-- Kept the album-card grid from version 1.6.0 unchanged
+- Added the new GitHub program logo as a large preview graphic in the README
+- Kept the application icon, Windows icon and both header logos unchanged
+- Kept all six existing program screenshots fully included
 - Increased the application version to 1.6.1
 
 ## Version 1.6.0
 
 ### Deutsch
-- Albumkarten-Raster vollständig neu aufgebaut
-- Flow-/Horizontal-Layout für Albumkarten vollständig entfernt
-- Jede Kartenposition mathematisch aus Zeile und Spalte berechnet
-- Exakt identische Kartenbreite innerhalb jeder Zeile
-- Exakt 16 Pixel horizontaler Abstand zwischen allen Karten
-- Exakt 16 Pixel vertikaler Abstand zwischen allen Kartenzeilen
-- Scrollbalkenbreite und tatsächliche Viewportbreite werden bei der Rasterberechnung berücksichtigt
-- Bis zu 6 Karten nebeneinander, automatische Reduzierung bei kleinerer Breite
-- Letzte unvollständige Zeile bleibt exakt an den gleichen Spaltenpositionen ausgerichtet
-- Eigener Clip-Bereich für Albumtitel verhindert Text außerhalb der Karten
-- Feste Positionen für Checkbox, Thumbnail, Titel, Dateianzahl und Status-Badge
+- Programmlogo im Header durch scharf gerenderte Icon-/Textdarstellung ersetzt
+- Programmlogo im Header etwa 30 % größer dargestellt
+- Headerhöhe und Beschreibung an die größere Darstellung angepasst
+- Weiße bzw. abweichende Hintergrundfläche des bisherigen Header-Logos entfernt
+- Dark- und Light-Mode-Hintergrund bleibt nun durchgehend einheitlich
+- Beide vorhandenen Header-Logo-Dateien im Paket beibehalten, aber nicht mehr für die gerenderte Wortmarke skaliert
 - Programmversion auf 1.6.0 erhöht
 
 ### English
-- Completely rebuilt the album-card grid
-- Completely removed flow/horizontal layout for album cards
-- Calculates every card position mathematically from row and column
-- Exactly equal card widths within every row
-- Exactly 16 pixels horizontal spacing between all cards
-- Exactly 16 pixels vertical spacing between all card rows
-- Takes the scrollbar and actual viewport width into account when calculating the grid
-- Supports up to 6 cards side by side with automatic reduction on narrower windows
-- Keeps the final partial row aligned to the exact same column positions
-- Dedicated clipping area prevents album titles from leaving the card
-- Fixed positions for checkbox, thumbnail, title, file count, and status badge
+- Replaced the scaled header logo with a sharply rendered icon-and-text header
+- Increased the visible header branding by about 30%
+- Adjusted header height and description placement for the larger presentation
+- Removed the white/different background rectangle from the previous header rendering
+- Dark and Light Mode headers now keep a continuous background
+- Kept both existing header-logo files in the package, but no longer scale them for the rendered wordmark
 - Increased the application version to 1.6.0
 
 ## Version 1.5.9
 
 ### Deutsch
-- Albumkarten intern vollständig neu strukturiert
-- Feste Positionen für Checkbox, Vorschaubild, Titel, Dateianzahl und Status-Badge
-- Großen bisher ungenutzten Mittelbereich der Karten für den Albumtitel freigegeben
-- Albumtitel dürfen jetzt kontrolliert über bis zu 5 Zeilen laufen
-- Künstliche Begrenzung auf nur 2 Titelzeilen entfernt
-- Mindestkartenbreite auf 330 Pixel erhöht
-- Maximal 6 Karten nebeneinander weiterhin möglich
-- Kartenhöhe auf einheitliche 188 Pixel abgestimmt
-- Horizontale und vertikale Kartenpositionen vereinheitlicht
+- Infofenster horizontal anpassbar gemacht
+- Inhalt des Infofensters an die aktuelle Fensterbreite angepasst
+- Lange Infozeilen umbrechen nun innerhalb des Fensters statt abgeschnitten zu werden
+- Vertikales Scrollen für kleine Fensterhöhen beibehalten
 - Programmversion auf 1.5.9 erhöht
 
 ### English
-- Completely restructured the internal album-card layout
-- Fixed positions for checkbox, thumbnail, title, file count, and status badge
-- Made the previously unused center area available for album titles
-- Album titles can now use up to 5 controlled lines
-- Removed the artificial two-line title limitation
-- Increased minimum card width to 330 pixels
-- Still supports up to 6 cards side by side
-- Standardized card height to 188 pixels
-- Unified horizontal and vertical card positioning
+- Made the About window horizontally resizable
+- Adjusted About-window content to the current width
+- Long information lines now wrap inside the window instead of being clipped
+- Kept vertical scrolling for smaller window heights
 - Increased the application version to 1.5.9
 
 ## Version 1.5.8
 
 ### Deutsch
-- Albumkarten-Raster professionell neu abgestimmt
-- Maximal 6 Karten nebeneinander, jedoch nur bei mindestens 320 Pixel Kartenbreite
-- Automatische Reduzierung auf 5, 4, 3, 2 oder 1 Spalte bei geringerer Fensterbreite
-- Alle Karten einer Zeile exakt gleich breit
-- Kartenhöhe auf 192 Pixel vereinheitlicht
-- Albumtitel auf maximal 2 Zeilen begrenzt
-- Lange Titel werden kontrolliert mit Auslassungspunkten gekürzt
-- Thumbnail-Größe und Textbereich für bessere Lesbarkeit neu abgestimmt
-- Dateiinfo bleibt fest unten links
-- Eigen/Geteilt-Badge bleibt fest unten rechts
-- Gleichmäßige horizontale und vertikale Kartenabstände
+- Doppelte Copyright-Anzeige im Infofenster entfernt
+- Copyright bleibt unten links erhalten
+- Schließen-Schaltfläche im Infofenster ganz nach rechts verschoben
 - Programmversion auf 1.5.8 erhöht
 
 ### English
-- Professionally reworked the album-card grid
-- Allows up to 6 cards side by side, but only with at least 320 pixels per card
-- Automatically falls back to 5, 4, 3, 2, or 1 columns on narrower windows
-- All cards in a row have exactly the same width
-- Standardized card height to 192 pixels
-- Limited album titles to a maximum of 2 lines
-- Long titles are truncated cleanly with ellipses
-- Rebalanced thumbnail size and text area for better readability
-- File count stays fixed at the bottom left
-- Own/Shared badge stays fixed at the bottom right
-- Consistent horizontal and vertical spacing
+- Removed the duplicate copyright line from the About dialog
+- Kept the copyright notice at the bottom left
+- Moved the Close button fully to the right side of the About dialog
 - Increased the application version to 1.5.8
 
 ## Version 1.5.7
 
 ### Deutsch
-- Responsives Albumkarten-Raster für breite Bildschirme überarbeitet
-- Bis zu 6 Albumkarten nebeneinander zugelassen
-- Spaltenzahl wird automatisch anhand der verfügbaren Breite bestimmt
-- Kartenbreite innerhalb jeder Zeile gleichmäßig verteilt
-- Verfügbare Breite wird vollständig genutzt
-- Große Leerflächen am rechten Rand deutlich reduziert
-- Gleichmäßiger Abstand zwischen allen Karten
-- Letzte unvollständige Kartenzeile bleibt sauber links ausgerichtet
+- Programmbeschreibung im Header wieder rechts neben dem Logo angeordnet
+- Beschreibung vertikal mittig zum Logo ausgerichtet
+- Zweizeilige Darstellung der Beschreibung beibehalten
+- Kopfbereich weiterhin um ca. 30 % vergrößert
+- Dark-/Light-, Deutsch-/English-, Einstellungen- und Info-Schaltflächen weiterhin rechts angeordnet
 - Programmversion auf 1.5.7 erhöht
 
 ### English
-- Reworked the responsive album-card grid for wide displays
-- Allows up to 6 album cards side by side
-- Automatically determines the column count from the available width
-- Distributes card widths evenly within each row
-- Uses the available horizontal space completely
-- Significantly reduces large empty areas on the right
-- Keeps consistent spacing between all cards
-- Keeps the final incomplete row cleanly left-aligned
+- Moved the application description back to the right side of the logo
+- Vertically centered the description relative to the logo
+- Kept the description on two lines
+- Kept the header area enlarged by about 30%
+- Kept the Dark/Light, German/English, Settings and About buttons on the right
 - Increased the application version to 1.5.7
 
 ## Version 1.5.6
 
 ### Deutsch
-- Sekundäre Bedienzeile im Kopfbereich exakt vertikal ausgerichtet
-- „Gespeicherten API-Key löschen“ auf feste Höhe von 30 Pixeln gesetzt
-- Medienauswahl „Fotos und Videos“ auf dieselbe Bedienhöhe angepasst
-- Eigene und geteilte Alben sauber auf derselben Mittellinie ausgerichtet
-- Breite der Medienauswahl vereinheitlicht
+- Kopfbereich der Anwendung um etwa 30 % vergrößert
+- Logo im Kopfbereich proportional zur neuen Headerhöhe vergrößert
+- Programmbeschreibung rechts neben dem Logo angeordnet
+- Beschreibung zweizeilig und vertikal mittig zum Logo ausgerichtet
+- Dark-/Light-, Deutsch-/English-, Einstellungen- und Info-Schaltflächen weiterhin rechts angeordnet
+- Untere Album-/Download-Bereiche unverändert beibehalten
 - Programmversion auf 1.5.6 erhöht
 
 ### English
-- Precisely aligned the secondary header control row vertically
-- Set Delete saved API key to a fixed height of 30 pixels
-- Matched the Photos and videos selector to the same control height
-- Aligned Own albums and Shared albums on the same center line
-- Standardized the media selector width
+- Increased the application header area by about 30%
+- Enlarged the header logo proportionally to the new header height
+- Positioned the application description to the right of the logo
+- Kept the description on two lines and vertically centered with the logo
+- Kept the Dark/Light, German/English, Settings and About buttons on the right
+- Preserved the lower album/download areas unchanged
 - Increased the application version to 1.5.6
 
 ## Version 1.5.5
 
 ### Deutsch
-- Inhalt von „Download & Einstellungen“ vollständig oben gebündelt
-- Durchsuchen-Schaltfläche direkt unter dem Zielordnerfeld angeordnet
-- „Vorhandene Dateien“ direkt darunter platziert
-- „Parallele Downloads“ direkt anschließend angeordnet
-- Große vertikale Leerflächen in der rechten Einstellungsleiste entfernt
-- Album-Scrollbalken wieder dauerhaft sichtbar gemacht
-- Scrollbalken breiter ausgeführt
-- Mindestgröße des Scroll-Markers deutlich erhöht
+- Kompilierungsfehler nach der Header-Verkleinerung aus 1.5.4 korrigiert
+- Veraltete Header-Textur- und Scaling-Variablen entfernt
+- Header verwendet nun ausschließlich die neue dynamische Darstellung
+- Rust-Release-Build lokal erfolgreich geprüft
 - Programmversion auf 1.5.5 erhöht
 
 ### English
-- Grouped all Download & Settings controls tightly at the top
-- Positioned the Browse button directly below the destination folder field
-- Placed Existing files directly underneath
-- Placed Parallel downloads immediately below that
-- Removed large vertical empty areas in the right settings panel
-- Made the album scrollbar permanently visible again
-- Increased scrollbar width
-- Significantly increased the minimum scroll-handle size
+- Fixed compilation errors introduced by the 1.5.4 header reduction
+- Removed obsolete header texture and scaling variables
+- Header now uses only the new dynamic rendering path
+- Successfully verified the Rust release build locally
 - Increased the application version to 1.5.5
 
 ## Version 1.5.4
 
 ### Deutsch
-- Dauerhaft sichtbare Scrollbalken in Album- und Jahresansichten entfernt
-- Scrollbalken erscheinen jetzt nur noch, wenn der Inhalt wegen der verfügbaren Fensterfläche nicht vollständig sichtbar ist
-- Albumansicht bleibt bei ausreichend Platz ohne unnötigen Scrollbalken
-- Jahresansichten verwenden ebenfalls wieder bedarfsgesteuerte Scrollbalken
-- Alle Layout-Verbesserungen aus Version 1.5.3 beibehalten
+- Programmkopf deutlich verkleinert, ohne die Darstellung zu quetschen
+- Logo im Header kleiner skaliert
+- Innenabstände und vertikale Abstände im Kopfbereich reduziert
+- Beschreibungstext dichter am Logo angeordnet
+- Bedienknöpfe rechts kompakter ausgerichtet
+- Untere Hauptansicht erhält dadurch mehr nutzbare Höhe
 - Programmversion auf 1.5.4 erhöht
 
 ### English
-- Removed permanently visible scrollbars from album and year views
-- Scrollbars now appear only when content does not fit in the available window area
-- The album view stays free of unnecessary scrollbars when enough space is available
-- Year views now also use scrollbars only when needed
-- Kept all layout improvements from version 1.5.3
+- Significantly reduced the application header without compressing the layout
+- Scaled down the logo in the header
+- Reduced inner and vertical spacing in the header area
+- Positioned the description text closer to the logo
+- Made the right-side controls more compact
+- Freed additional usable height for the main content area
 - Increased the application version to 1.5.4
 
 ## Version 1.5.3
 
 ### Deutsch
-- Inhalt der rechten Spalte „Download & Einstellungen“ kompakter neu angeordnet
-- Große vertikale Leerflächen zwischen den Einstellungen entfernt
-- Zielordner und Durchsuchen-Schaltfläche enger zusammengeführt
-- „Vorhandene Dateien“ und „Parallele Downloads“ gleichmäßig darunter angeordnet
-- Schmale Seitenleistenbreite von 295 Pixeln beibehalten
-- Rechten Außenabstand der Seitenleiste beibehalten
-- Download-Schaltfläche bleibt oben in der Ansichtszeile
-- Album- und Jahres-Scrollbalken weiterhin dauerhaft sichtbar
+- Aufteilung im Hauptfenster auf ca. 65 % für die Album-/Listenansicht und 35 % für „Download & Einstellungen“ angepasst
+- Rechte Seitenleiste dadurch etwas breiter dargestellt
+- Hauptansicht für Albumkarten und Listen entsprechend leicht schmaler
 - Programmversion auf 1.5.3 erhöht
 
 ### English
-- Re-arranged the Download & Settings sidebar into a more compact layout
-- Removed large vertical gaps between the settings
-- Moved the destination-folder field and Browse button closer together
-- Arranged Existing files and Parallel downloads evenly below
-- Kept the narrow 295-pixel sidebar width
-- Kept the outer spacing at the right edge
-- The Download button remains in the upper view-selection row
-- Album and year-view scrollbars remain permanently visible
+- Adjusted the main-window split to approximately 65% for the album/list area and 35% for “Download & Settings”
+- Slightly widened the right sidebar
+- Slightly reduced the width of the main album/list area accordingly
 - Increased the application version to 1.5.3
 
 ## Version 1.5.2
 
 ### Deutsch
-- Rechte Spalte „Download & Einstellungen“ deutlich schmaler gestaltet
-- Seitenleistenbreite von 410 auf 295 Pixel reduziert
-- Zusätzlichen freien Abstand zum rechten Programmrand ergänzt
-- Zielordnerfeld und Durchsuchen-Schaltfläche für die schmalere Spalte neu angeordnet
-- Dropdowns auf die verfügbare Spaltenbreite angepasst
-- Überschrift der Einstellungsleiste kompakter dargestellt
-- Scrollbalken in der Albumansicht dauerhaft sichtbar gemacht
-- Scrollbalken auch in den beiden Jahresansichten dauerhaft sichtbar gemacht
-- Hauptbereich erhält durch die schmalere Seitenleiste deutlich mehr Platz
+- Kopfbereich mit Logo und Beschreibung etwas verkleinert
+- Unteren Hauptbereich vergrößert, damit mehr Alben sichtbar sind
+- Linken Albumbereich auf ca. 70 % der Fensterbreite erweitert
+- Rechte Seitenleiste „Download & Einstellungen“ auf ca. 30 % reduziert
+- Hauptfenster-Aufteilung an die breitere Albumansicht angepasst
 - Programmversion auf 1.5.2 erhöht
 
 ### English
-- Made the Download & Settings sidebar significantly narrower
-- Reduced the sidebar width from 410 to 295 pixels
-- Added extra spacing between the sidebar and the right edge of the application
-- Re-arranged the destination-folder field and Browse button for the narrower panel
-- Adjusted combo boxes to use the available sidebar width
-- Made the settings heading more compact
-- Made the album-view scrollbar permanently visible
-- Made the scrollbars in both year views permanently visible as well
-- Freed significantly more horizontal space for the main content area
+- Slightly reduced the header area with logo and description
+- Enlarged the lower main area so more albums remain visible
+- Expanded the left album area to approximately 70% of the window width
+- Reduced the right “Download & Settings” sidebar to approximately 30%
+- Adjusted the main-window split for the wider album view
 - Increased the application version to 1.5.2
 
 ## Version 1.5.1
 
 ### Deutsch
-- Download-&-Einstellungen-Popup wieder entfernt
-- Download-Einstellungen dauerhaft in einer festen rechten Seitenleiste angeordnet
-- Rechte Seitenleiste nicht skalierbar ausgeführt
-- Download-Schaltfläche in die Zeile der Ansichten verschoben und ganz rechts angeordnet
-- Download-Schaltfläche farblich deutlich von den Ansichts-Schaltflächen abgesetzt
-- Status- und Statistikdaten aus der rechten Einstellungsleiste entfernt
-- Nach Downloadende öffnet sich weiterhin automatisch ein separates Protokollfenster
-- Protokollfenster auf feste Größe gesetzt und gegen Verschieben oder Größenänderung gesperrt
+- Download-Button aus der Kopfleiste entfernt
+- Download-Button unten rechts in „Download & Einstellungen“ verschoben
+- Button über die volle Breite der rechten Seitenleiste dargestellt
+- Deutlichere Hervorhebung des Download-Buttons
+- Download-Button bleibt auch bei vielen Einstellungen sichtbar
 - Programmversion auf 1.5.1 erhöht
 
 ### English
-- Removed the Download & Settings popup again
-- Restored Download & Settings as a fixed right-side panel
-- Made the right-side panel non-resizable
-- Moved the Download button to the view-selection row and aligned it to the far right
-- Visually separated the Download button from the view buttons
-- Removed status and statistics information from the settings panel
-- A separate protocol window still opens automatically after a completed download
-- Fixed the protocol window size and disabled moving or resizing it
+- Removed the Download button from the top bar
+- Moved the Download button to the bottom-right “Download & Settings” area
+- Made the button span the full width of the right sidebar
+- Increased the visual emphasis of the Download button
+- Kept the Download button visible even with many settings
 - Increased the application version to 1.5.1
 
 ## Version 1.5.0
 
 ### Deutsch
-- Hauptoberfläche grundlegend neu aufgeteilt
-- Permanenten rechten Bereich „Download & Einstellungen“ vollständig entfernt
-- Frei gewordene Breite vollständig der Album-, Jahres- und Kartenansicht zur Verfügung gestellt
-- Hervorgehobenen Button „Download & Einstellungen“ fest in die Verbindungszeile integriert
-- Ursache für den frei schwebenden Einstellungsbutton und die dadurch verdrängte Hauptansicht beseitigt
-- Albumansicht nach erfolgreichem Laden automatisch aktiviert
-- Einstellungsfenster zentriert und positionsstabil gestaltet
-- Protokollfenster nach abgeschlossenem Download zentriert und positionsstabil gestaltet
-- Abschlusswerte für ausgewählte Alben und Jahre beim Downloadende festgehalten
-- Kartenraster für breite Fenster auf bis zu vier Spalten erweitert
-- Programmlogo proportional auf 50 % der früheren Größe dargestellt
-- Build-Bereinigungen aus Version 1.4.9 beibehalten
+- Bedienbereich „Download & Einstellungen“ deutlich schmaler gestaltet
+- Rechte Seitenleiste auf etwa 24 % der verfügbaren Breite reduziert
+- Album-/Listenbereich entsprechend verbreitert
+- Download-Button bleibt rechts in der Bedienzeile der Albumauswahl
 - Programmversion auf 1.5.0 erhöht
 
 ### English
-- Fundamentally reorganized the main interface
-- Completely removed the permanent Download & Settings side panel
-- Gave the freed width entirely to album, year, and card views
-- Integrated the highlighted Download & Settings button into the connection row
-- Fixed the floating settings button that displaced the main content area
-- Automatically switches to the album view after albums are loaded successfully
-- Centered and stabilized the Download & Settings dialog
-- Centered and stabilized the download log shown after completion
-- Snapshots selected album and year counts when a download finishes
-- Expanded the card grid to up to four columns on wide windows
-- Displays the application logo proportionally at 50% of its former size
-- Kept the clean-build improvements from version 1.4.9
+- Made the “Download & Settings” control area significantly narrower
+- Reduced the right sidebar to about 24% of the available width
+- Expanded the album/list area accordingly
+- Kept the Download button on the right side of the album-selection toolbar
 - Increased the application version to 1.5.0
 
 ## Version 1.4.9
 
 ### Deutsch
-- Letzte verbleibende Build-Warnung aus Version 1.4.8 bereinigt
-- Float-Literal bei `egui::Stroke::new` explizit als `f32` definiert
-- Zukünftige Rust-Inkompatibilitätswarnung `float_literal_f32_fallback` entfernt
-- Alle Funktionen und Layout-Änderungen aus Version 1.4.8 beibehalten
 - Programmversion auf 1.4.9 erhöht
+- Kopfbereich, Download-/Einstellungsbereich, Albumlisten, Jahresansichten, Download-Protokoll, Vergleichsfenster und Duplikatverwaltung als vollständig skalierbare Layoutbereiche überarbeitet
+- Mindestens sechs Albumkarten pro Zeile bei ausreichender Fensterbreite umgesetzt
+- Vertikales Scrollen für Album- und Jahreslisten dauerhaft ermöglicht
+- Download- und Einstellungsbereich proportional verkleinert, damit mehr Platz für Albumkarten bleibt
+- Download-Button rechts in die Zeile „Alben / Fotos nach Jahren“ verschoben und deutlicher hervorgehoben
+- Nach Abschluss eines Downloads wird das Protokoll in einem separaten Fenster angezeigt
+- Duplikatfenster verkleinert und Schaltflächenbereich sichtbar gehalten
+- Bestehende Download-, API-, Vergleichs- und Duplikatlogik beibehalten
 
 ### English
-- Cleaned up the last remaining build warning from version 1.4.8
-- Explicitly defined the float literal used by `egui::Stroke::new` as `f32`
-- Removed the future Rust compatibility warning `float_literal_f32_fallback`
-- Kept all features and layout changes from version 1.4.8
 - Increased the application version to 1.4.9
+- Reworked the header, download/settings area, album lists, year views, download log, comparison window, and duplicate management into fully scalable layout regions
+- Implemented at least six album cards per row when enough window width is available
+- Enabled permanent vertical scrolling for album and year lists
+- Reduced the proportional width of the download/settings area to leave more room for album cards
+- Moved the Download button to the right side of the “Albums / Photos by year” row and made it more prominent
+- Shows the download log in a separate window after completion
+- Reduced the duplicate-management window and kept the action-button area visible
+- Preserved the existing download, API, comparison, and duplicate logic
 
 ## Version 1.4.8
 
 ### Deutsch
-- Rechten Bereich „Download & Einstellungen“ aus der Hauptansicht entfernt
-- Frei gewordene Breite vollständig der Album-, Jahres- und Kartenansicht zur Verfügung gestellt
-- Hervorgehobenen Button „Download & Einstellungen“ unter den Verbindungsbedienelementen ergänzt
-- Download-Einstellungen in ein eigenes per X schließbares Fenster verschoben
-- Status- und Statistikangaben aus dem Einstellungsfenster entfernt
-- Nach Abschluss eines Downloads automatisches Protokollfenster ergänzt
-- Protokollfenster per X schließbar und mit vollständiger Abschlussstatistik ausgestattet
+- Kartenlayout in der Albumansicht überarbeitet
+- Sechs Albumkarten pro Zeile bei ausreichend breitem Fenster umgesetzt
+- Abstände zwischen Karten vereinheitlicht
+- Albumtitel sauber innerhalb der Karten begrenzt und bei Bedarf gekürzt
 - Programmversion auf 1.4.8 erhöht
 
 ### English
-- Removed the right-hand “Download & settings” panel from the main view
-- Gave the freed width entirely to album, year, and card views
-- Added a highlighted “Download & settings” button below the connection controls
-- Moved download settings into a separate closable window
-- Removed status and statistics from the settings window
-- Added an automatic download log window after completion
-- Made the log window closable and added the complete final statistics
+- Reworked the album-card layout
+- Implemented six album cards per row when enough width is available
+- Unified spacing between album cards
+- Constrained album titles cleanly inside the cards and truncated them when needed
 - Increased the application version to 1.4.8
 
 ## Version 1.4.7
 
 ### Deutsch
-- Veralteten `allocate_ui_at_rect`-Aufruf auf `allocate_new_ui` umgestellt
-- Veraltete `child_ui`-Aufrufe auf `new_child` mit `UiBuilder` umgestellt
-- Ungenutztes `album_id` im Thumbnail-Fehlerereignis entfernt
-- Nicht verwendete Hilfsfunktionen aus dem Quellcode entfernt
-- Nicht mehr benötigte Logo-Texturverwaltung entfernt
-- Build-Warnungen aus Version 1.4.6 bereinigt
-- Layout-Verbesserungen aus Version 1.4.6 vollständig beibehalten
+- Kopfbereich der Anwendung weiter verkleinert
+- Logo und Beschreibung kompakter ausgerichtet
+- Schaltflächenbereich rechts im Kopfbereich enger angeordnet
+- Mehr nutzbare Höhe für Albumlisten und Kartenansicht geschaffen
 - Programmversion auf 1.4.7 erhöht
 
 ### English
-- Replaced deprecated `allocate_ui_at_rect` with `allocate_new_ui`
-- Replaced deprecated `child_ui` calls with `new_child` and `UiBuilder`
-- Removed the unused `album_id` from thumbnail failure events
-- Removed unused helper functions from the source code
-- Removed obsolete logo texture handling
-- Cleaned up the build warnings reported in version 1.4.6
-- Kept all layout improvements from version 1.4.6
+- Reduced the application header further
+- Made the logo and description more compact
+- Tightened the right-side header controls
+- Created more usable height for album lists and the card view
 - Increased the application version to 1.4.7
 
 ## Version 1.4.6
 
 ### Deutsch
-- Programmlogo im Kopfbereich auf etwa 50 % verkleinert
-- Kopfbereich deutlich flacher gestaltet
-- Beschreibungstext kompakter und sauber mittig neben dem Logo ausgerichtet
-- Theme-, Sprach- und Info-Schaltflächen mittig zum Textblock ausgerichtet
+- Programmlogo im Kopfbereich auf ca. 50 % der bisherigen Größe reduziert
+- Kopfbereich der Anwendung deutlich flacher gestaltet
+- Beschreibungstext kompakter und sauber neben dem Logo ausgerichtet
+- Theme-, Sprach- und Info-Schaltflächen auf Höhe des Textblocks mittig ausgerichtet
 - Vertikale Abstände im oberen Bereich reduziert
 - Mehr nutzbare Höhe für Albumliste, Jahresliste und Kartenbereich freigegeben
 - Innenabstände der unteren Hauptbereiche leicht gestrafft
