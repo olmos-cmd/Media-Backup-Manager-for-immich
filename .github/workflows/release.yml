@@ -1,0 +1,82 @@
+name: Windows Release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install stable Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Cargo
+        uses: Swatinem/rust-cache@v2
+
+      - name: Verify Cargo.lock
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "Cargo.lock")) {
+            throw "Cargo.lock is missing. Generate and commit Cargo.lock before building."
+          }
+
+      - name: Verify tag matches Cargo version
+        shell: pwsh
+        run: |
+          $cargoVersion = (Select-String -Path Cargo.toml -Pattern '^version\s*=\s*"([^"]+)"').Matches.Groups[1].Value
+          if ($cargoVersion -ne "${{ github.ref_name }}") {
+            throw "Tag ${{ github.ref_name }} does not match Cargo.toml version $cargoVersion"
+          }
+
+      - name: Format check
+        run: cargo fmt --check
+
+      - name: Check
+        run: cargo check --locked
+
+      - name: Test
+        run: cargo test --locked
+
+      - name: Build release
+        run: cargo build --release --locked
+
+      - name: Prepare release package and checksum
+        shell: pwsh
+        run: |
+          $version = "${{ github.ref_name }}"
+          $zipName = "Media_Backup_Manager_v${version}_Windows_x64.zip"
+          $checksumName = "SHA256SUMS_Media_Backup_Manager_v${version}.txt"
+
+          Remove-Item -Recurse -Force release-package -ErrorAction SilentlyContinue
+          New-Item -ItemType Directory -Force -Path release-package | Out-Null
+
+          Copy-Item "target/release/media_backup_manager.exe" "release-package/Media Backup Manager.exe"
+          Copy-Item "LICENSE" "release-package/LICENSE"
+          Copy-Item "README.txt" "release-package/README.txt"
+          Copy-Item "THIRD_PARTY_NOTICES.md" "release-package/THIRD_PARTY_NOTICES.md"
+          Copy-Item "THIRD_PARTY_PACKAGES_1.6.8.txt" "release-package/THIRD_PARTY_PACKAGES_1.6.8.txt"
+          Copy-Item "SOURCE_CODE_NOTICE.md" "release-package/SOURCE_CODE_NOTICE.md"
+          Copy-Item "RELEASE_NOTES.md" "release-package/RELEASE_NOTES.md"
+
+          Compress-Archive -Path "release-package/*" -DestinationPath $zipName
+
+          $hash = (Get-FileHash -Algorithm SHA256 $zipName).Hash.ToLowerInvariant()
+          "$hash  $zipName" | Set-Content -Encoding ascii $checksumName
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: RELEASE_NOTES.md
+          files: |
+            Media_Backup_Manager_v${{ github.ref_name }}_Windows_x64.zip
+            SHA256SUMS_Media_Backup_Manager_v${{ github.ref_name }}.txt

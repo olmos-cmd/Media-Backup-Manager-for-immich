@@ -1,0 +1,58 @@
+Media Backup Manager 1.6.8 – GitHub release text / Veröffentlichungstext
+
+PROPOSED TAG / VORGESEHENER TAG
+1.6.8
+
+PROPOSED RELEASE TITLE / VORGESEHENER RELEASE-TITEL
+Media Backup Manager 1.6.8
+
+DEUTSCH
+Media Backup Manager 1.6.8 bündelt die seit 1.6.3 entstandenen UI- und Stabilitätsverbesserungen. Die Lizenz bleibt GNU General Public License v3.0 only (GPL-3.0-only); es findet keine erneute Lizenzumstellung statt.
+
+Highlights:
+- Überarbeitete Albumcover- und Jahresansichten mit responsivem Raster.
+- Pixelgenaue Kartenkonturen in Hell und Dunkel; verbesserte Light-Mode-Darstellung der Album- und Jahreskarten.
+- Verbesserte Header-, Infofenster- und Button-Darstellung.
+- Deutsche und englische Oberfläche sowie Dark/Light Mode beibehalten.
+- Bestehende Download-, Vergleichs- und Immich-API-Funktionen beibehalten.
+- Sechs aktuelle echte 1.6.8-Screenshots und aktualisierte GitHub-Präsentation.
+
+Immich-Zugriff:
+Media Backup Manager kommuniziert ausschließlich über die Immich-API. Es besteht keine direkte PostgreSQL-Verbindung und die Immich-Datenbank wird nicht verändert. Das Programm sichert Originalmedien, ersetzt aber keine vollständige Immich-Datenbank-/Serversicherung.
+
+Verifikation des finalen Quellstands unter Windows:
+- cargo fmt --check: erfolgreich
+- cargo check --locked: erfolgreich
+- cargo test --locked: 11 bestanden, 0 fehlgeschlagen
+- cargo build --release --locked: erfolgreich
+
+Media Backup Manager ist eine unabhängige Drittanbieter-Anwendung und kein offizielles Produkt von Immich oder FUTO. Das Projekt wird von Immich oder FUTO weder unterstützt noch gesponsert.
+
+ENGLISH
+Media Backup Manager 1.6.8 consolidates the UI and stability improvements developed since 1.6.3. The license remains GNU General Public License v3.0 only (GPL-3.0-only); this is not another license transition.
+
+Highlights:
+- Reworked album-cover and year views with responsive grids.
+- Pixel-accurate card outlines in Light and Dark modes, with improved Light-mode album/year card presentation.
+- Refined header, About-window and button presentation.
+- German/English UI and Dark/Light modes retained.
+- Existing download, comparison and Immich API functionality retained.
+- Six current real 1.6.8 screenshots and refreshed GitHub presentation.
+
+Immich access:
+Media Backup Manager communicates with Immich exclusively through the Immich API. It does not connect directly to PostgreSQL and does not modify the Immich database. It backs up original media files but does not replace a complete Immich database/server backup.
+
+Final Windows source verification:
+- cargo fmt --check: passed
+- cargo check --locked: passed
+- cargo test --locked: 11 passed, 0 failed
+- cargo build --release --locked: passed
+
+Media Backup Manager is an independent third-party application and is not an official Immich or FUTO product. It is not endorsed, supported or sponsored by Immich or FUTO.
+
+IMPORTANT / WICHTIG
+Do not publish until the remaining desired manual checks and third-party upstream license/notice-file collection are completed/reviewed.
+Nicht veröffentlichen, bevor die noch gewünschten manuellen Prüfungen sowie die Sammlung/Prüfung der Upstream-Lizenz-/NOTICE-Dateien abgeschlossen sind.
+
+No commit, push, tag or release was created.
+Kein Commit, Push, Tag oder Release wurde erstellt.
